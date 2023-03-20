@@ -5,20 +5,12 @@ import logoImg from '../../assets/Perfil-Analítica.svg';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
-import { useAuth } from '../../hooks/auth';
-
 import {
     Container,
     Logo,
-    Form,
-    FormTitle,
 } from './styles';
 
-const SignIn: React.FC = () => {
-    const [email, setEmail] = useState<string>('');
-    const [password, setPassword] = useState<string>('');    
-
-    const { signIn } = useAuth();
+const SignIn = () => {
 
     return (
         <Container>
@@ -26,25 +18,19 @@ const SignIn: React.FC = () => {
                 <img src={logoImg} alt="Minha Carteira" />
                 <h2>Analítica 3M</h2>
             </Logo>
-            <Form onSubmit={() => signIn(email, password)}>
-                <FormTitle>Entrar</FormTitle>
 
                 <Input 
                     type="email"
-                    placeholder="e-mail"
+                    placeholder="Chave da API"
                     required
-                    onChange={(e) => setEmail(e.target.value)}
                     />
                 <Input 
                     type="password"
-                    placeholder="senha"
+                    placeholder="Link"
                     required
-                    onChange={(e) => setPassword(e.target.value)}
                     />
 
                <Button type="submit">Acessar</Button>
-            <h4>user: matheus@email.com | Seha: 123</h4>
-            </Form>
         </Container>
     );
 }

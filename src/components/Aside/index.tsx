@@ -8,9 +8,10 @@ import {
     MdExitToApp,
     MdClose,
     MdMenu, 
+    MdHelpOutline,
 } from 'react-icons/md';
 
-import logoImg from '../../assets/logo.svg';
+import logoImg from '../../assets/Perfil-Analítica.svg';
 
 import { useAuth } from '../../hooks/auth';
 import { useTheme } from '../../hooks/theme';
@@ -54,13 +55,18 @@ const Aside: React.FC = () => {
                 </ToggleMenu>
 
                 <LogImg src={logoImg} alt="Logo Minha Carteira" />
-                <Title>Minha Carteira</Title>
+                <Title>Analítica 3M</Title>
             </Header>
 
             <MenuContainer>
                 <MenuItemLink href="/">
                     <MdDashboard />
-                    Dashboard
+                    Análises
+                </MenuItemLink>
+
+                <MenuItemLink href="src\pages\Configuracao">
+                    <MdHelpOutline />
+                    Configurações
                 </MenuItemLink>
 
                 <MenuItemLink href="/list/entry-balance">
