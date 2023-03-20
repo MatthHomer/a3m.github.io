@@ -26,7 +26,6 @@ const SignIn: React.FC = () => {
                 <img src={logoImg} alt="Minha Carteira" />
                 <h2>Minha Carteira</h2>
             </Logo>
-
             <Form onSubmit={() => signIn(email, password)}>
                 <FormTitle>Entrar</FormTitle>
 
@@ -35,16 +34,18 @@ const SignIn: React.FC = () => {
                     placeholder="e-mail"
                     required
                     onChange={(e) => setEmail(e.target.value)}
-                />
+                    />
                 <Input 
                     type="password"
                     placeholder="senha"
                     required
                     onChange={(e) => setPassword(e.target.value)}
-                />
+                    />
 
                <Button type="submit">Acessar</Button>
             </Form>
+            
+            <h4>matheus@email.com | 123</h4>
         </Container>
     );
 }
